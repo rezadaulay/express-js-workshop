@@ -1,0 +1,40 @@
+<h4 class="text-center mb-3">Listing Todo</h4>
+{{!-- <div>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th>Deskripsi</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div> --}}
+<div>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Judul</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+             {{#each todos}}  {{!-- membuka sintaks looping foreach --}}
+            <tr>
+                <td>
+                   {{ this.name }}
+                </td>
+                <td>
+                    <a href="/detail/{{ this.id }}">Detail</a>
+                </td>
+            </tr>
+            {{/each}} {{!-- menutup sintaks looping foreach --}}
+        </tbody>
+    </table>
+</div>
